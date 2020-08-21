@@ -2,13 +2,13 @@
 <target name="clean">
 <delete dir="classes"/>
 </target>
-<target name="compile"depends="clean">
+<target name="compile" depends="clean">
 <mkdir dir="classes"/>
-<javacsrc dir="src"destdir="classes"/>
+
 </target> 
 <target name="jar"depends="compile">
 <mkdir dir="jar"/>
-<jar destfile="jar/HelloAnt.jar"basedir="classes">
+<jar destfile="jar/HelloAnt.jar" basedir="classes">
 <manifest>
 <attribute name="Main-Class"
 value="HelloAnt"/>
